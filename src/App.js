@@ -6,6 +6,7 @@ import GreetingPureComponentFunction from './logics/GreetingPureComponentFunctio
 import RefClass from './logics/RefClass';
 import RefFunc from './logics/RefFunc';
 import HOC from './logics/HOC';
+import PrevPropsState from './logics/PrevPropsState';
 
 /*
 1. controlled component are component controlled via state variables, like input and form fields
@@ -21,6 +22,7 @@ const users = [
 
 export default function App() {
   const [timer,setTimer]=useState(0);
+  const [count,setCount]=useState(0);
 
   useEffect(()=>{
 
@@ -37,6 +39,8 @@ export default function App() {
     <div style={{justifyContent:'center', display:'flex'}} >
       <h1>App</h1>
     </div>
+    <PrevPropsState count={count} />
+    <button onClick={()=>setCount(count+1)} >Inc Prop Count</button>
     <div style={{margin:10,padding:10}} >
     <ListView data={users} />
     {

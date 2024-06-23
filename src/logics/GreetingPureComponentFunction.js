@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { memo, useState } from 'react'
 
 export default function GreetingPureComponentFunction(props) {
