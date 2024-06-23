@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Greet from './Greet';
 import User from './User';
-
+// pass data back to parent
 function Mahadev() {
   const [bhakti,setBhakti]=useState('');
 
