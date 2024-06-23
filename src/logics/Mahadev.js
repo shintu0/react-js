@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Greet from './Greet';
-import User from './User';
+import Greet from '../components/Greet';
+import User from '../components/User';
 
 function Mahadev() {
   const [bhakti,setBhakti]=useState('');
