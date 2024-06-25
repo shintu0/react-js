@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import CreateTodo from "./pages/create-todo";
+import Home from "./pages/home";
+import Todos from "./pages/todos";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/todos"}>Todos</Link>
+        </li>
+        <li>
+          <Link to={"/create-todo"}>Contact</Link>
+        </li>
+      </nav>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/todos" element={<Todos />} />
+        <Route exact path="/create-todo" element={<CreateTodo />} />
+      </Routes>
+    </Router>
   );
 }
 
